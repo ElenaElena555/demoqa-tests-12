@@ -31,7 +31,6 @@ allure-results/
 gradle/
 build/
 bin/
-out/
 logs/
 target/
 .classpath
@@ -40,3 +39,4 @@ target/
 .vscode
 /gradlew
 /gradlew.bat
+out/
