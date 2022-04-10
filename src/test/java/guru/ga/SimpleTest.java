@@ -13,6 +13,7 @@ public class SimpleTest {
 
     void openYaPage(){  Selenide.open("https://yandex.ru");
         System.out.println("### @BeforeEach");
+
     }
     @AfterEach
 
