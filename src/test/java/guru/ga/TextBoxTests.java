@@ -22,16 +22,14 @@ public class TextBoxTests {
         String Name = "Elena";
         String Surname = "Sukhanova";
         String Email = "lenasyhanova@yandex.ru";
-        String Number = "89214232563";
+        String Number = "9214232563";
         String month = "November";
         String year = "1992";
         String SubjectInput = "Computer Science";
         String currentAddress= "Montenegro";
         String state = "NCR";
         String city ="Noida";
-      //   executeJavaScript("$('footer').remove()");
-        //   executeJavaScript("$('#fixedban').remove()");
-        //    SelenideElement stateCityWrapper = $("#stateCity-wrapper");
+
 
       open ("/automation-practice-form");
       $("[id=firstName]").setValue(Name);
@@ -47,20 +45,14 @@ public class TextBoxTests {
       $("[id=uploadPicture]").uploadFromClasspath("1.jpg");
       $("#subjectsInput").setValue(SubjectInput).pressEnter();
       $("#currentAddress").setValue(currentAddress);
-         Selenide.zoom(0.55);
-         //  Я попробовала три варианта проверки по городам, но перекрывает реклама, не могу ее убрать
-   //    $("#stateCity-wrapper").scrollIntoView(true);
-    // $("#stateCity-wrapper").$(byText("NCR")).click();
-    // $("#stateCity-wrapper").$(byText("Noida")).click();
-
-     //    $("[class=css-1wa3eu0-placeholder]").selectOption("css-1hwfws3");;
-     //    $("#css-1wa3eu0-placeholder]").click();
-     //    $(byText("Noida")).click();//   stateCityWrapper.$(byText("Select State")).click();
-
-    //    stateCityWrapper.$(byText(state)).click();
-    //    stateCityWrapper.$(byText("Select City")).click();
-     //   stateCityWrapper.$(byText(city)).click();
-        $("[id=submit]").click();
+      Selenide.zoom(0.75);
+      executeJavaScript("$('footer').remove()");
+      executeJavaScript("$('#fixedban').remove()");
+      $("#stateCity-wrapper").click();
+      $("#stateCity-wrapper").$(byText("NCR")).click();
+      $("#stateCity-wrapper").$(byText("Select City")).click();
+      $("#stateCity-wrapper").$(byText("Noida")).click();
+      $("[id=submit]").click();
 
         // Проверка
         $(".table-responsive").shouldHave(
@@ -69,13 +61,14 @@ public class TextBoxTests {
                 text(Number),
                 text(month),
                 text(year),
-                 text("24"),
+                text("24"),
                 text("Sports"),
                 text("Female"),
+                text("1.jpg"),
                 text(SubjectInput),
-                text(currentAddress)
-         //       text("NCR"),
-         //     text("Noida")
+                text(currentAddress),
+                text("NCR"),
+                text("Noida")
                 );
     }
 
