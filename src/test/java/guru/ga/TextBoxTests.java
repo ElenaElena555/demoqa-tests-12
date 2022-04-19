@@ -15,7 +15,6 @@ public class TextBoxTests {
             Configuration.holdBrowserOpen = true;
             Configuration.baseUrl = "https://demoqa.com";
             Configuration.browserSize = "1920x1080";
-
         }
     @Test
     void fillFormTest (){
@@ -32,17 +31,17 @@ public class TextBoxTests {
 
 
       open ("/automation-practice-form");
-      $("[id=firstName]").setValue(Name);
-      $("[id=lastName]").setValue(Surname);
-      $("[id=userEmail]").setValue(Email);
-      $("[id=userNumber]").setValue(Number);
-      $("[id=dateOfBirthInput]").click();
-      $("[class=react-datepicker__month-select]").selectOption(month);
-      $("[class=react-datepicker__year-select]").selectOption(year);
+      $("#firstName").setValue(Name);
+      $("#lastName").setValue(Surname);
+      $("#userEmail").setValue(Email);
+      $("#userNumber").setValue(Number);
+      $("#dateOfBirthInput").click();
+      $(".react-datepicker__month-select").selectOption(month);
+      $(".react-datepicker__year-select").selectOption(year);
       $(byText("24")).click();
       $(byText("Sports")).click();
       $(byText("Female")).click();
-      $("[id=uploadPicture]").uploadFromClasspath("1.jpg");
+      $("#uploadPicture").uploadFromClasspath("1.jpg");
       $("#subjectsInput").setValue(SubjectInput).pressEnter();
       $("#currentAddress").setValue(currentAddress);
       Selenide.zoom(0.75);
@@ -52,7 +51,7 @@ public class TextBoxTests {
       $("#stateCity-wrapper").$(byText("NCR")).click();
       $("#stateCity-wrapper").$(byText("Select City")).click();
       $("#stateCity-wrapper").$(byText("Noida")).click();
-      $("[id=submit]").click();
+      $("#submit").click();
 
         // Проверка
         $(".table-responsive").shouldHave(
