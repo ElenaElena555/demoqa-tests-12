@@ -68,9 +68,9 @@ public class OperatAndMethids {
         int num55 = -2147483648;
         int num66 = -2147483648;
         System.out.println("toomin"+(num55+num66));
-        long num556 = 9223372036854775807;
-        long num666 = 9223372036854775807;
-        System.out.println("toomax"+(num666+num556);
+        short num556 = 32767;
+        short num666 = 32767;
+        System.out.println("toomax"+(num666+num556));
 
     }
 }
