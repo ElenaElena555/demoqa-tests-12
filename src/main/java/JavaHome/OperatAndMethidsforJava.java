@@ -1,6 +1,7 @@
-package guru.qa2;
+package JavaHome;
 
-public class OperatAndMethids {
+public class OperatAndMethidsforJava {
+
     public static void main(String []args) {
         byte exByte = 8; // -128 to 128
         short exShort = 16; // -32768 to 32767
@@ -10,13 +11,14 @@ public class OperatAndMethids {
         double exDouble = 2.3; // 4.9e-324 to 1.7e+308
         boolean exBoolean = false;  // true or false
         char exChar = 'a'; // an unsigned integer representing a UTF-16 character (letters and numbers)
-        String exString = "Hello"; //
+        String exString = "Hello";
 
-        //Написать код, использующий большинство или все виды операторов, о которых сегодня говорилось.
+
+        //Написать код, использующий большинство или все виды операторов, о которых сегодня говорилось
         int num1 = 1;
         int num2 = 56;
         int num3 = -5;
-        // арифметические операторы;
+        // арифметические операторы
         int num4 = num1 + num2;
         int num5 = num2 - num3;
         int num6 = num1 * num2;
@@ -74,5 +76,3 @@ public class OperatAndMethids {
 
     }
 }
-
-
