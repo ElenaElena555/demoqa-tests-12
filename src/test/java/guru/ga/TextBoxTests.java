@@ -56,16 +56,16 @@ public class TextBoxTests {
 
         // Проверка
         $(".table-responsive").shouldHave(
-                text(Name + " " + Surname),
-                text(Email),
-                text(Number),
+                text(name + " " + surname),
+                text(email),
+                text(number),
                 text(month),
                 text(year),
                 text("24"),
                 text("Sports"),
                 text("Female"),
                 text("1.jpg"),
-                text(SubjectInput),
+                text(subjectInput),
                 text(currentAddress),
                 text("NCR"),
                 text("Noida")
