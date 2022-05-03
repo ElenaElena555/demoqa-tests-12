@@ -88,13 +88,13 @@ public class RegistartionFromPage {
 
     public RegistartionFromPage setSubmit() {
         $("#submit").click();
-        ;
+
         return this;
     }
 
     public RegistartionFromPage checkForm(String fieldName, String value) {
         $(".table-responsive").$(byText(fieldName)).parent().shouldHave(text(value));
-        ;
+
         return this;
     }
 }

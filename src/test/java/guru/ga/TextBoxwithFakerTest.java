@@ -6,7 +6,7 @@ import guru.pages.RegistartionFromPage;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-public class TextBoxwithFaker {
+public class TextBoxwithFakerTest {
     RegistartionFromPage registartionFromPage = new RegistartionFromPage();
 
     Faker faker = new Faker();
