@@ -3,6 +3,7 @@ package gitHub;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.CollectionCondition.texts;
+import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -18,12 +19,12 @@ public class SelenideRepositoryTest {
         // перейти в раздел Wiki проекта
         $("#wiki-tab").click();
         // убедится, что в списке страниц (Pages) есть страница SoftAssertions
-        //  $(".markdown-body").find(byText("SoftAssertions")).click();  не смогла вызвать элемент из списка этим способом, пробовала
-        //  "ul li" но не находит
-        $(byText("Soft assertions")).click();
+         $(".markdown-body").find(byText("Soft assertions")).click();
+      //  $(byText("Soft assertions")).click();
         // открыть страницу SoftAssertions,
         // проверить, что внутри есть пример кода для JUnit5
         $$("ol").shouldHave(texts("JUnit5 extension"));
+        $(".markdown-body").shouldHave(text("Soft assertions"));
     }
 
 
