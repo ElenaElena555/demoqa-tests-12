@@ -1,0 +1,30 @@
+TestCase#1
+Summary: Verification of the searching for books and presents
+Priority: High
+Assignee: Elena S
+Test Data: [[1984, 1984],[Paper, Paper]]
+Preconditions:
+1. Go to https://www.bookvoed.ru/
+
+Steps to reproduce:
+1. Click on Searching field
+2. Type {Test Data[0]}
+3. Click searching button
+Expected result:
+Page opens with the {Test Data[1]} page
+
+TestCase#2
+Summary: Verification of the searching booking from {0}
+Priority: High
+Assignee: Elena S
+Test Data: [[Budva, Budva],[Pogorica, Pogorica]]]
+Preconditions:
+1. Go to https:/https://www.booking.com/
+Steps to reproduce:
+1. Click on Destination field
+2. Type {Test Data[0]}
+3. Select start date
+3. Select end date
+4. Click Search button
+Expected result:
+Page opens with the {Test Data[1]} page
