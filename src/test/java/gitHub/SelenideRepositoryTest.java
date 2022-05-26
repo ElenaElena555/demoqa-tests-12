@@ -25,6 +25,7 @@ public class SelenideRepositoryTest {
         // проверить, что внутри есть пример кода для JUnit5
         $$("ol").shouldHave(texts("JUnit5 extension"));
         $(".markdown-body").shouldHave(text("Soft assertions"));
+
     }
 
 

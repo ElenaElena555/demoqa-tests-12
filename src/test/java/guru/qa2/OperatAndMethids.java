@@ -11,7 +11,7 @@ public class OperatAndMethids {
         boolean exBoolean = false;  // true or false
         char exChar = 'a'; // an unsigned integer representing a UTF-16 character (letters and numbers)
         String exString = "Hello"; //
-
+        
         //Написать код, использующий большинство или все виды операторов, о которых сегодня говорилось.
         int num1 = 1;
         int num2 = 56;
